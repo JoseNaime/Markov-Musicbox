@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Markov Musicbox</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full">
+<div class="mx-auto max-w-3xl h-full">
+    <div class="px-6 pt-8 pb-16 sm:pt-16 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+            <p class="text-base font-semibold leading-7 text-sky-500">Jose Naime</p>
+            <h2 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">Markov Musicbox</h2>
+            <p class="mt-6 text-lg leading-8 text-white">This project was developed with a Markov chain to "generate
+                                                         melodies" using the <b class="italic text-blue-500">F# minor key</b></p>
+        </div>
+    </div>
+    <h2 id="current-note" class="grow text-5xl align-middle text-center"></h2>
+    <div>
+        <table id="markov-table" class="m-auto">
+        </table>
+    </div>
+    <div class="pt-4 pb-4 flex flex-col">
+        <div class="mt-6 grow flex justify-center gap-6">
+            <button id="btn_play"
+                    class="rounded-md bg-blue-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                Play Tone
+            </button>
+            <div class="flex flex-col">
+                <div>
+                    <div class="flex justify-between">
+                        <label for="autoplay-BPM">BPM</label>
+                        <p id="bpm-display"></p>
+                    </div>
+                    <div>
+                        <input type="range" min="50" max="300" id="autoplay-BPM" value="200" class="bg-blue-600">
+                    </div>
+                </div>
+                <button id="btn_autoplay"
+                        class="rounded-md bg-blue-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    Auto play
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="note-history" class=" mx-auto h-36 max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col">
+        <h3 class="text-lg my-4">Note History</h3>
+        <div class="flex flex-col">
+            <div id="note-history-list" class="rounded p-4 h-auto lg:p-6 grow text-xs text-slate-400 italic ">
+            </div>
+            <button id="btn_clear-history" class="pb-4 pr-4 lg:pb-6 flex-row-reverse text-end text-slate-400 text-xs">Clear
+                                                                                                               history
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+<script src="./lib/Tone.js"></script>	
+<script type="module" src="src/app.js"></script>
+
+</html>
