@@ -10,12 +10,15 @@
 </head>
 <body class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full">
 <div class="mx-auto max-w-3xl h-full">
-    <div class="px-6 pt-8 pb-16 sm:pt-16 lg:px-8">
+    <div class="px-6 pt-8 pb-8 sm:pt-16 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-            <p class="text-base font-semibold leading-7 text-sky-500">Jose Naime</p>
+            <p class="text-base font-semibold leading-7 text-blue-500">Jose Naime</p>
             <h2 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">Markov Musicbox</h2>
             <p class="mt-6 text-lg leading-8 text-white">This project was developed with a Markov chain to "generate
-                                                         melodies" using the <b class="italic text-blue-500">F# minor key</b></p>
+                                                         melodies" using the <b class="italic ">F# minor key</b> to simulate stochastic events
+                <a href="https://github.com/JoseNaime/Markov-Musicbox"
+                   class="text-xs text-blue-500 underline"
+                   target=_blank>See on GitHub</a></p>
         </div>
     </div>
     <h2 id="current-note" class="grow text-5xl align-middle text-center"></h2>
@@ -49,16 +52,17 @@
     <div id="note-history" class=" mx-auto h-36 max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col">
         <h3 class="text-lg my-4">Note History</h3>
         <div class="flex flex-col">
-            <div id="note-history-list" class="rounded p-4 h-auto lg:p-6 grow text-xs text-slate-400 italic ">
+            <div id="note-history-list" class="rounded p-6 pb-0 h-10 grow text-xs text-slate-400 italic ">
             </div>
-            <button id="btn_clear-history" class="pb-4 pr-4 lg:pb-6 flex-row-reverse text-end text-slate-400 text-xs">Clear
-                                                                                                               history
+            <button id="btn_clear-history" class="pb-4 pr-4 lg:pb-6 flex-row-reverse text-end text-slate-400 text-xs underline">
+                Clear
+                history
             </button>
         </div>
     </div>
 </div>
 </body>
-<script src="./lib/Tone.js"></script>	
+<script src="./lib/Tone.js"></script>
 <script type="module" src="src/app.js"></script>
 
 </html>

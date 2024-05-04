@@ -62,7 +62,10 @@ btnAutoPlay.addEventListener('click', function () {
 inputBpm.addEventListener('input', function () {
     bpm = inputBpm.value;
     bpmDisplay.innerText = bpm;
+
+
 })
+
 
 // main
 const main = () => {
